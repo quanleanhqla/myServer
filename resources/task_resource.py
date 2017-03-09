@@ -12,7 +12,7 @@ class TaskListRes(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument(name="name", type=str, location="json")
         parser.add_argument(name="local_id", type=str, location="json")
-        parser.add_argument(name="done", type=str, location="json")
+        parser.add_argument(name="done", type=bool, location="json")
         body = parser.parse_args()
 
         name = body["name"]
@@ -47,7 +47,7 @@ class TaskUpdateRes(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument(name="name", type=str, location="json")
         parser.add_argument(name="local_id", type=str, location="json")
-        parser.add_argument(name="done", type=str, location="json")
+        parser.add_argument(name="done", type=bool, location="json")
         body = parser.parse_args()
 
         name = body["name"]
