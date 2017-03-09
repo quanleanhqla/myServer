@@ -26,6 +26,8 @@ all_tasks = Task.objects()
 
 api.add_resource(TaskListRes, "/tasks")
 api.add_resource(TaskRes, "/tasks/<task_id>")
+api.add_resource(TaskUpdateRes, "/task/<task_id>")
+api.add_resource(TaskDelRes, "/task/<task_id>")
 
 if __name__ == '__main__':
     app.run()
